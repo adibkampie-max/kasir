@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Kasir Makanan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">KASIR<span>KU.</span></div>
+    <div class="status">● Sistem Kasir Online</div>
+</header>
+
+<main class="container">
+
+    <section class="welcome">
+        <div>
+            <h1>Sistem Kasir Makanan</h1>
+            <p>Kelola data makanan dengan mudah dan cepat.</p>
+        </div>
+        <div id="tanggal"></div>
+    </section>
+
+    <section class="stats">
+        <div class="stat-card">
+            <p>Total Menu</p>
+            <h2 id="jumlahMenu">0</h2>
+        </div>
+        <div class="stat-card">
+            <p>Total Harga Menu</p>
+            <h2 id="totalHarga">Rp0</h2>
+        </div>
+    </section>
+
+    <section class="content">
+
+        <div class="form-card">
+            <h2 id="judulForm">Tambah Makanan</h2>
+            <p class="subtitle">Masukkan data makanan.</p>
+
+            <form id="formKasir">
+                <input type="hidden" id="id_kasir">
+
+                <label>Nama Makanan</label>
+                <input type="text" id="nama_makanan"
+                    placeholder="Contoh: Nasi Goreng" required>
+
+                <label>Harga Makanan</label>
+                <input type="number" id="harga"
+                    placeholder="Contoh: 15000" min="1" required>
+
+                <button type="submit" id="btnSimpan">
+                    + Tambah Makanan
+                </button>
+
+                <button type="button" id="btnBatal" class="btn-cancel" hidden>
+                    Batal Edit
+                </button>
+            </form>
+            <p id="pesan"></p>
+        </div>
+
+        <div class="table-card">
+            <div class="table-header">
+                <div>
+                    <h2>Daftar Makanan</h2>
+                    <p class="subtitle">Data makanan yang tersimpan.</p>
+                </div>
+                <input type="search" id="pencarian"
+                    placeholder="Cari makanan...">
+            </div>
+
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Kasir</th>
+                            <th>Nama Makanan</th>
+                            <th>Harga</th>
+                            <th>Aksi</th>
+                        </tr>
+                    </thead>
+                    <tbody id="daftarMakanan">
+                        <tr>
+                            <td colspan="4">Memuat data...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    © 2026 Sistem Kasir Makanan
+    <br>HTML • CSS • JavaScript • Supabase
+</footer>
+
+<script type="module" src="script.js"></script>
+</body>
+</html>
