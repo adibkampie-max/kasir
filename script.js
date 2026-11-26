@@ -3,8 +3,8 @@ import { createClient } from
 "https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm";
 
 // KONFIGURASI SUPABASE
-const SUPABASE_URL = "MASUKKAN_URL_SUPABASE";
-const SUPABASE_KEY = "MASUKKAN_PUBLISHABLE_KEY";
+const SUPABASE_URL = "https://nkcenrdljsmudzeejdbv.supabase.co";
+const SUPABASE_KEY = "sb_publishable_cFCt9ZqcZoUdMZkA__reCw_AqKkW7jn";
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_KEY);
 
